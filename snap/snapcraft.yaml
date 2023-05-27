@@ -227,7 +227,7 @@ parts:
   srt:
     plugin: cmake
     source: https://github.com/Haivision/srt.git
-    source-tag: 'v1.4.4'
+    source-tag: 'v1.5.1'
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -260,7 +260,7 @@ parts:
   aom:
     plugin: cmake
     source: https://aomedia.googlesource.com/aom.git
-    source-tag: 'v3.2.0'
+    source-tag: 'v3.6.1'
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -282,7 +282,7 @@ parts:
   dav1d:
     plugin: meson
     source: https://code.videolan.org/videolan/dav1d.git
-    source-tag: '0.9.2'
+    source-tag: '1.2.0'
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
@@ -303,7 +303,7 @@ parts:
       - srt
       - x264
     source: https://github.com/FFmpeg/FFmpeg.git
-    source-branch: release/4.3
+    source-branch: release/6.0
     build-packages:
       - libass-dev
       - libbz2-dev
@@ -444,7 +444,7 @@ parts:
       - ffmpeg
     plugin: meson
     source: https://gitlab.freedesktop.org/pipewire/pipewire.git
-    source-tag: '0.3.32'
+    source-tag: '0.3.71'
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
@@ -585,7 +585,7 @@ parts:
       - -DENABLE_WAYLAND=TRUE
       - -DWITH_RTMPS=TRUE
     source: https://github.com/obsproject/obs-studio.git
-    source-tag: '27.2.1'
+    source-tag: '29.1.1'
     parse-info: [usr/share/metainfo/com.obsproject.Studio.appdata.xml]
     override-pull: |
       snapcraftctl pull
@@ -618,22 +618,22 @@ parts:
       git clone --recursive https://github.com/exeldro/obs-gradient-source.git ${SNAPCRAFT_PART_SRC}/plugins/obs-gradient-source
       echo "add_subdirectory(obs-gradient-source)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/exeldro/obs-move-transition.git ${SNAPCRAFT_PART_SRC}/plugins/obs-move-transition --branch 2.5.7
+      git clone --recursive https://github.com/exeldro/obs-move-transition.git ${SNAPCRAFT_PART_SRC}/plugins/obs-move-transition --branch 2.9.0
       echo "add_subdirectory(obs-move-transition)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
       git clone --recursive https://github.com/exeldro/obs-recursion-effect.git ${SNAPCRAFT_PART_SRC}/plugins/obs-recursion-effect
       echo "add_subdirectory(obs-recursion-effect)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/exeldro/obs-replay-source.git ${SNAPCRAFT_PART_SRC}/plugins/obs-replay-source --branch 1.6.9
+      git clone --recursive https://github.com/exeldro/obs-replay-source.git ${SNAPCRAFT_PART_SRC}/plugins/obs-replay-source --branch 1.6.12
       echo "add_subdirectory(obs-replay-source)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/iamscottxu/obs-rtspserver.git ${SNAPCRAFT_PART_SRC}/plugins/obs-rtspserver --branch v2.2.0
+      git clone --recursive https://github.com/iamscottxu/obs-rtspserver.git ${SNAPCRAFT_PART_SRC}/plugins/obs-rtspserver --branch v3.0.0
       echo "add_subdirectory(obs-rtspserver)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/WarmUpTill/SceneSwitcher.git ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/SceneSwitcher --branch 1.17.2
+      git clone --recursive https://github.com/WarmUpTill/SceneSwitcher.git ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/SceneSwitcher --branch 1.22.1
       echo "add_subdirectory(SceneSwitcher)" >> ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/Qufyy/obs-scale-to-sound.git ${SNAPCRAFT_PART_SRC}/plugins/obs-scale-to-sound --branch 1.2.0
+      git clone --recursive https://github.com/Qufyy/obs-scale-to-sound.git ${SNAPCRAFT_PART_SRC}/plugins/obs-scale-to-sound --branch 1.2.2
       echo "add_subdirectory(obs-scale-to-sound)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
       git clone --recursive https://github.com/exeldro/obs-source-copy.git ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/obs-source-copy
@@ -645,13 +645,13 @@ parts:
       git clone --recursive https://github.com/exeldro/obs-source-switcher.git ${SNAPCRAFT_PART_SRC}/plugins/obs-source-switcher
       echo "add_subdirectory(obs-source-switcher)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/Xaymar/obs-StreamFX.git ${SNAPCRAFT_PART_SRC}/plugins/obs-StreamFX --branch 0.11.0
+      git clone --recursive https://github.com/Xaymar/obs-StreamFX.git ${SNAPCRAFT_PART_SRC}/plugins/obs-StreamFX --branch 0.12.0b299
       echo "add_subdirectory(obs-StreamFX)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
       git clone --recursive https://github.com/exeldro/obs-time-warp-scan.git ${SNAPCRAFT_PART_SRC}/plugins/obs-time-warp-scan
       echo "add_subdirectory(obs-time-warp-scan)" >> ${SNAPCRAFT_PART_SRC}/plugins/CMakeLists.txt
 
-      git clone --recursive https://github.com/exeldro/obs-transition-table.git ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/obs-transition-table  --branch 0.2.3
+      git clone --recursive https://github.com/exeldro/obs-transition-table.git ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/obs-transition-table  --branch 0.2.6
       sed -i 's|VERSION 3\.18|VERSION 3\.16|' ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/obs-transition-table/CMakeLists.txt
       echo "add_subdirectory(obs-transition-table)" >> ${SNAPCRAFT_PART_SRC}/UI/frontend-plugins/CMakeLists.txt
     override-build: |
@@ -892,7 +892,7 @@ parts:
     plugin: cmake
     after: [ obs ]
     source: https://github.com/norihiro/obs-audio-pan-filter.git
-    source-tag: '0.1.2'
+    source-tag: '0.2.3'
     build-environment:
       - Qt5_DIR: $SNAPCRAFT_STAGE/opt/qt515
     override-build: |
@@ -953,7 +953,7 @@ parts:
     plugin: meson
     after: [ obs ]
     source: https://github.com/fzwoch/obs-gstreamer.git
-    source-tag: 'v0.3.3'
+    source-tag: 'v0.4.0'
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
@@ -977,7 +977,7 @@ parts:
     plugin: cmake
     after: [ obs ]
     source: https://github.com/gnif/LookingGlass.git
-    source-branch: 'Release/B4'
+    source-branch: 'Release/B6'
     build-packages:
       - binutils-dev
     override-build: |
@@ -995,7 +995,7 @@ parts:
       - libndi
       - obs
     source: https://github.com/Palakis/obs-ndi.git
-    source-tag: '4.9.1'
+    source-tag: '4.11.1'
     build-environment:
       - Qt5_DIR: $SNAPCRAFT_STAGE/opt/qt515
     cmake-parameters:
@@ -1012,7 +1012,7 @@ parts:
     plugin: meson
     after: [ obs ]
     source: https://gitlab.com/fzwoch/obs-nvfbc.git
-    source-tag: 'v0.0.5'
+    source-tag: 'v0.0.7'
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
@@ -1025,7 +1025,7 @@ parts:
     plugin: cmake
     after: [ obs ]
     source: https://github.com/nowrep/obs-vkcapture.git
-    source-tag: 'v1.1'
+    source-tag: 'v1.3.3'
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -1057,12 +1057,30 @@ parts:
       - -DCMAKE_CXX_FLAGS_RELEASE=-s
       - -DLIBOBS_INCLUDE_DIR=$SNAPCRAFT_STAGE/usr/include/obs/
       - -DLIBOBS_LIB=$SNAPCRAFT_STAGE/usr/lib/
-
-  obs-spectralizer:
+ 
+ # DEAD PLUGIN SO REPLACED BY WAVEFORM AS A TEST
+ # obs-spectralizer:
+ #   plugin: cmake
+ #   after: [ obs ]
+ #   source: https://github.com/univrsal/spectralizer.git
+ #   source-tag: 'v1.3.4'
+ #   cmake-parameters:
+ #     - -DCMAKE_INSTALL_PREFIX=/usr
+ #     - -DCMAKE_BUILD_TYPE=Release
+ #     - -DCMAKE_C_FLAGS_RELEASE=-s
+ #     - -DCMAKE_CXX_FLAGS_RELEASE=-s
+ #     - -DLIBOBS_INCLUDE_DIR=$SNAPCRAFT_STAGE/usr/include/obs/
+ #     - -DGLOBAL_INSTALLATION=TRUE
+ #   build-packages:
+ #     - libfftw3-dev
+ #   stage-packages:
+ #     - libfftw3-3
+    
+  obs-waveform:
     plugin: cmake
     after: [ obs ]
-    source: https://github.com/univrsal/spectralizer.git
-    source-tag: 'v1.3.4'
+    source: https://github.com/phandasm/waveform.git
+    source-tag: 'v1.6.1'
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -1101,7 +1119,7 @@ parts:
     plugin: cmake
     after: [ obs ]
     source: https://github.com/norihiro/obs-vnc.git
-    source-tag: '0.4.0'
+    source-tag: '0.5.0-rc1'
     build-packages:
       - libvncserver-dev
     stage-packages:
@@ -1121,17 +1139,18 @@ parts:
     organize:
       usr/lib/$SNAPCRAFT_ARCH_TRIPLET/obs-plugins/obs-vnc.so: usr/lib/obs-plugins/
 
-  obs-websocket:
-    plugin: dump
-    after: [ obs ]
-    source: https://github.com/obsproject/obs-websocket/releases/download/4.9.1/obs-websocket_4.9.1-1_amd64.deb
-    prime:
-      - -usr/lib/$SNAPCRAFT_ARCH_TRIPLET/obs-plugins
+ # SHOULD BE OBSOLETE NOW DUE TO 5.0.1 being included now.
+ # obs-websocket:
+ #   plugin: dump
+ #   after: [ obs ]
+ #   source: https://github.com/obsproject/obs-websocket/releases/download/4.9.1-compat/obs-websocket-4.9.1-compat-Ubuntu64.deb
+ #   prime:
+ #     - -usr/lib/$SNAPCRAFT_ARCH_TRIPLET/obs-plugins
 
   # Using the CPU runtime, it is not possible to satisify all the GPU runtime requirements.
   onnxruntime:
     plugin: dump
-    source: https://github.com/microsoft/onnxruntime/releases/download/v1.10.0/onnxruntime-linux-x64-1.10.0.tgz
+    source: https://github.com/microsoft/onnxruntime/releases/download/v1.15.0/onnxruntime-linux-x64-1.15.0.tgz
     organize:
       include/*.h: usr/include/
       lib/*.so*: usr/lib/
@@ -1142,7 +1161,7 @@ parts:
     plugin: cmake
     after: [ obs, onnxruntime ]
     source: https://github.com/royshil/obs-backgroundremoval.git
-    source-tag: 'v0.4.0'
+    source-tag: 'v0.5.19'
     build-packages:
       - libopencv-dev
     override-build: |

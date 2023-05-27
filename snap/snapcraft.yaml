@@ -215,7 +215,7 @@ parts:
   nv-codec-headers:
     plugin: make
     source: https://github.com/FFmpeg/nv-codec-headers.git
-    source-branch: 'sdk/10.0'
+    source-branch: 'sdk/11.1'
     make-parameters:
       - PREFIX=/usr
     build-packages:
@@ -495,7 +495,7 @@ parts:
   cef:
     plugin: cmake
     source:
-      - on amd64: https://cef-builds.spotifycdn.com/cef_binary_95.7.18%2Bg0d6005e%2Bchromium-95.0.4638.69_linux64_minimal.tar.bz2
+      - on amd64: https://cef-builds.spotifycdn.com/cef_binary_113.1.5%2Bge452d82%2Bchromium-113.0.5672.93_linux64_minimal.tar.bz2
     build-packages:
       - libatk1.0-dev
       - libatk-bridge2.0-dev

@@ -1197,7 +1197,7 @@ parts:
       - obs-waveform
       - obs-vkcapture
       - obs-vnc
-      - obs-websocket
+      #- obs-websocket
     source: snap/local/
     stage-packages:
       - mesa-utils

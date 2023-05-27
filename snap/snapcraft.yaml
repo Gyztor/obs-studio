@@ -1194,7 +1194,7 @@ parts:
       - obs-nvfbc
       - obs-rgb-levels
       - obs-text-pango
-      - obs-spectralizer
+      - obs-waveform
       - obs-vkcapture
       - obs-vnc
       - obs-websocket

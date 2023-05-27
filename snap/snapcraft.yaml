@@ -196,7 +196,7 @@ apps:
 
 package-repositories:
   - type: apt
-    ppa: beineri/opt-qt-5.15.2-focal
+    ppa: beineri/opt-qt-5.15.4-focal
 
 parts:
   desktop-launch:

@@ -508,7 +508,7 @@ parts:
       - libnspr4
       - libnss3
       - libxtst6
-   override-pull: |
+    override-pull: |
       snapcraftctl pull
       sed -i 's|VERSION 3\.19|VERSION 3\.16|' CMakeLists.txt
       strip --strip-unneeded ${SNAPCRAFT_PART_SRC}/Release/*.so
